@@ -1,87 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
 
-    form {
-      display: grid;
-      gap: 10px;
-      max-width: 400px;
-      margin-bottom: 20px;
-    }
+        form {
+            display: grid;
+            gap: 10px;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
 
-    label {
-      font-weight: bold;
-    }
+        label {
+            font-weight: bold;
+        }
 
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      max-width: 600px;
-    }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
 
-    table, th, td {
-      border: 1px solid #ddd;
-    }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
 
-    th, td {
-      padding: 8px;
-      text-align: left;
-    }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
 
-    .error {
-      color: red;
-      font-size: 14px;
-    }
-  </style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <form id="registrationForm">
-    <h2>Registration Form</h2>
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
+    <form id="registrationForm">
+        <h2>Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-    <span id="emailError" class="error"></span>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span id="emailError" class="error"></span>
 
-    <label for="password">Password (at least 8 characters):</label>
-    <input type="password" id="password" required>
-    <span id="passwordError" class="error"></span>
+        <label for="password">Password (at least 8 characters):</label>
+        <input type="password" id="password" required>
+        <span id="passwordError" class="error"></span>
 
-    <label for="dob">Date of Birth (between 18 and 55 years old):</label>
-    <input type="date" id="dob" required>
-    <span id="dobError" class="error"></span>
+        <label for="dob">Date of Birth (between 18 and 55 years old):</label>
+        <input type="date" id="dob" required>
+        <span id="dobError" class="error"></span>
 
-    <label for="acceptedTerms">Accept Terms and Conditions:</label>
-    <input type="checkbox" id="acceptedTerms" required>
+        <label for="acceptedTerms">Accept Terms and Conditions:</label>
+        <input type="checkbox" id="acceptedTerms" required>
 
-    <button type="submit">Submit</button>
-  </form>
+        <button type="submit">Submit</button>
+    </form>
 
-  <table id="userTable">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Dob</th>
-        <th>Accepted terms?</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
- <script defer src="./index.js">
-  </script>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Dob</th>
+                <th>Accepted terms?</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script defer src="./index.js"></script>
 </body>
 </html>
