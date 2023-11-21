@@ -1,10 +1,25 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Load saved data when the page loads
+    loadSavedData();
+
     document.getElementById('registrationForm').addEventListener('submit', function (event) {
         event.preventDefault();
         if (validateForm()) {
             saveFormData();
-            loadSavedData();
+            loadSavedData(); // Reload the data after saving a new entry
         }
+    });
+
+    document.getElementById('dob').addEventListener('change', function () {
+        validateDOB();
+    });
+
+    document.getElementById('email').addEventListener('input', function () {
+        validateEmail();
+    });
+
+    document.getElementById('password').addEventListener('input', function () {
+        validatePassword();
     });
 
     function validateForm() {
@@ -95,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (savedData) {
             // Iterate over the saved data and add rows to the table
             savedData.forEach(formData => {
-                const newRow = tableBody.insertRow(0);
+                const newRow = tableBody.insertRow(tableBody.rows.length);
 
                 newRow.innerHTML = `
                     <td>${formData.name}</td>
@@ -107,7 +122,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
-
-    // Load saved data when the page loads
-    loadSavedData();
 });
